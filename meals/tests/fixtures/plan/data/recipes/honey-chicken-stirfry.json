@@ -1,0 +1,44 @@
+{
+ "slug": "honey-chicken-stirfry",
+ "url": "https://example.invalid/honey-chicken-stirfry/",
+ "title": "Honey Chicken Stir-fry",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Chinese"
+ ],
+ "keywords": [],
+ "rating": 4.9,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1200,
+   "unit": "g",
+   "name": "chicken breast",
+   "protein": true
+  },
+  {
+   "amount": 500,
+   "unit": "g",
+   "name": "rice"
+  },
+  {
+   "amount": 2,
+   "unit": null,
+   "name": "onion"
+  },
+  {
+   "amount": null,
+   "unit": null,
+   "name": "salt"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "chicken breast"
+}

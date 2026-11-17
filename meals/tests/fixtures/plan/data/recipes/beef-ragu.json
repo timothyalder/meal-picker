@@ -1,0 +1,44 @@
+{
+ "slug": "beef-ragu",
+ "url": "https://example.invalid/beef-ragu/",
+ "title": "Beef Ragu",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Italian"
+ ],
+ "keywords": [],
+ "rating": 4.7,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1000,
+   "unit": "g",
+   "name": "beef mince",
+   "protein": true
+  },
+  {
+   "amount": 800,
+   "unit": "g",
+   "name": "tinned tomatoes"
+  },
+  {
+   "amount": 500,
+   "unit": "g",
+   "name": "pasta"
+  },
+  {
+   "amount": 1,
+   "unit": null,
+   "name": "onion"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "beef mince"
+}

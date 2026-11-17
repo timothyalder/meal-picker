@@ -1,0 +1,49 @@
+{
+ "slug": "chicken-thigh-curry",
+ "url": "https://example.invalid/chicken-thigh-curry/",
+ "title": "Chicken Thigh Curry",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Indian"
+ ],
+ "keywords": [],
+ "rating": 4.8,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1300,
+   "unit": "g",
+   "name": "chicken thigh",
+   "protein": true
+  },
+  {
+   "amount": 400,
+   "unit": "g",
+   "name": "greek yoghurt"
+  },
+  {
+   "amount": 2,
+   "unit": null,
+   "name": "onion"
+  },
+  {
+   "amount": 800,
+   "unit": "g",
+   "name": "tinned tomatoes"
+  },
+  {
+   "amount": 2,
+   "unit": "tbsp",
+   "name": "garam masala"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "chicken thigh"
+}

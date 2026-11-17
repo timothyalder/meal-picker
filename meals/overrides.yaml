@@ -1,0 +1,9 @@
+# Hand fixes per recipe slug. Empty until a recipe needs one.
+#
+#   some-recipe-slug:
+#     exclude: true              # never offer it (plan_week.py)
+#     style: curry               # style used for variety and tuning (plan_week.py)
+#     steps_for:                 # ingredient name -> step number (1-based), wins over
+#       garam masala: 3          # recipe_table.py's word matching
+#       chicken stock: 4
+{}

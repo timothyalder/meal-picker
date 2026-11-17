@@ -1,0 +1,39 @@
+{
+ "slug": "lamb-tagine",
+ "url": "https://example.invalid/lamb-tagine/",
+ "title": "Lamb Tagine",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Moroccan"
+ ],
+ "keywords": [],
+ "rating": 4.9,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1400,
+   "unit": "g",
+   "name": "lamb shoulder",
+   "protein": true
+  },
+  {
+   "amount": 800,
+   "unit": "g",
+   "name": "chickpeas"
+  },
+  {
+   "amount": 400,
+   "unit": "g",
+   "name": "tinned tomatoes"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "lamb shoulder"
+}

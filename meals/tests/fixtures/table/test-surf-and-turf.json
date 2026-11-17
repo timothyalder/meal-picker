@@ -1,0 +1,18 @@
+{
+ "slug": "test-surf-and-turf", "url": "https://example.invalid/test-surf-and-turf", "title": "Test Surf and Turf",
+ "serves": 4,
+ "ingredients": [
+  {"amount": 500, "unit": "g", "name": "beef rump steak", "notes": null, "group": null},
+  {"amount": 250, "unit": "g", "name": "raw prawns", "notes": "peeled", "group": null},
+  {"amount": 2, "unit": "eggs", "name": "eggs", "notes": null, "group": null},
+  {"amount": 800, "unit": "g", "name": "potatoes", "notes": null, "group": null},
+  {"amount": 40, "unit": "g", "name": "unsalted butter", "notes": null, "group": null},
+  {"amount": 1, "unit": "tsp", "name": "caster sugar", "notes": null, "group": null},
+  {"amount": 1, "unit": "tbsp", "name": "olive oil", "notes": null, "group": null}
+ ],
+ "steps": [
+  "Boil the potatoes until tender, drain, then mash with the butter and the eggs.",
+  "Rub the steak with olive oil and sear in a hot pan; cook the prawns in the same pan.",
+  "Sprinkle the sugar over and serve."
+ ]
+}

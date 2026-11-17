@@ -1,0 +1,341 @@
+{
+ "week": "2026-11-11",
+ "stores": {
+  "aldi": {
+   "ok": true,
+   "fetched": "2026-11-11T07:31:00",
+   "products": [
+    {
+     "store": "aldi",
+     "id": "A-CHB",
+     "name": "Chicken Breast Fillets 1kg",
+     "price": 11.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 11.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-CHT",
+     "name": "Chicken Thigh Fillets",
+     "price": 12.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": true,
+     "usual_price": 12.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-MIN",
+     "name": "Beef Mince 500g",
+     "price": 6.0,
+     "size_qty": 500,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 6.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-LAM",
+     "name": "Lamb Shoulder",
+     "price": 14.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": true,
+     "usual_price": 14.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-POR",
+     "name": "Pork Mince 500g",
+     "price": 5.5,
+     "size_qty": 500,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 5.5,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-YOG",
+     "name": "Greek Yoghurt 1kg",
+     "price": 5.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 5.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-RIC",
+     "name": "White Rice 1kg",
+     "price": 2.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 2.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-ONI",
+     "name": "Brown Onions",
+     "price": 3.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": true,
+     "usual_price": 3.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-TOM",
+     "name": "Diced Tomatoes 400g",
+     "price": 0.9,
+     "size_qty": 400,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 0.9,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-PAS",
+     "name": "Penne 500g",
+     "price": 1.2,
+     "size_qty": 500,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 1.2,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-CHK",
+     "name": "Chickpeas 400g",
+     "price": 0.8,
+     "size_qty": 400,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 0.8,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-COC",
+     "name": "Coconut Milk 400ml",
+     "price": 1.5,
+     "size_qty": 400,
+     "size_unit": "ml",
+     "per_kg": false,
+     "usual_price": 1.5,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "aldi",
+     "id": "A-STO",
+     "name": "Chicken Stock 1L",
+     "price": 2.0,
+     "size_qty": 1000,
+     "size_unit": "ml",
+     "per_kg": false,
+     "usual_price": 2.0,
+     "special": false,
+     "category": "x"
+    }
+   ]
+  },
+  "woolworths": {
+   "ok": true,
+   "fetched": "2026-11-11T07:33:00",
+   "products": [
+    {
+     "store": "woolworths",
+     "id": "W-CHB",
+     "name": "Woolworths Chicken Breast 1kg",
+     "price": 12.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 12.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-CHT",
+     "name": "Woolworths Chicken Thigh",
+     "price": 13.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": true,
+     "usual_price": 13.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-MIN",
+     "name": "Woolworths Beef Mince 500g",
+     "price": 7.0,
+     "size_qty": 500,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 8.5,
+     "special": true,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-LAM",
+     "name": "Woolworths Lamb Shoulder",
+     "price": 15.0,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": true,
+     "usual_price": 15.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-POR",
+     "name": "Woolworths Pork Mince 500g",
+     "price": 6.0,
+     "size_qty": 500,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 6.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-YOG",
+     "name": "Woolworths Greek Yoghurt 1kg",
+     "price": 5.5,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 5.5,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-RIC",
+     "name": "Woolworths Rice 1kg",
+     "price": 2.2,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 2.2,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-ONI",
+     "name": "Brown Onions",
+     "price": 3.5,
+     "size_qty": 1000,
+     "size_unit": "g",
+     "per_kg": true,
+     "usual_price": 3.5,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-TOM",
+     "name": "Woolworths Diced Tomatoes 400g",
+     "price": 1.0,
+     "size_qty": 400,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 1.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-PAS",
+     "name": "Woolworths Penne 500g",
+     "price": 1.0,
+     "size_qty": 500,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 1.0,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-CHK",
+     "name": "Woolworths Chickpeas 400g",
+     "price": 0.9,
+     "size_qty": 400,
+     "size_unit": "g",
+     "per_kg": false,
+     "usual_price": 0.9,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-COC",
+     "name": "Woolworths Coconut Milk 400ml",
+     "price": 1.6,
+     "size_qty": 400,
+     "size_unit": "ml",
+     "per_kg": false,
+     "usual_price": 1.6,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-STO",
+     "name": "Woolworths Chicken Stock 1L",
+     "price": 2.5,
+     "size_qty": 1000,
+     "size_unit": "ml",
+     "per_kg": false,
+     "usual_price": 2.5,
+     "special": false,
+     "category": "x"
+    },
+    {
+     "store": "woolworths",
+     "id": "W-FSH",
+     "name": "Fish Sauce 200ml",
+     "price": 3.5,
+     "size_qty": 200,
+     "size_unit": "ml",
+     "per_kg": false,
+     "usual_price": 3.5,
+     "special": false,
+     "category": "x"
+    }
+   ]
+  }
+ }
+}

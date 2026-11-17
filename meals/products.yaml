@@ -1,0 +1,1142 @@
+# Ingredient name -> what to buy. Keys are matched after common.norm_name (lower case, no
+# punctuation). Format and fields: products.example.yaml. TJ's to correct.
+#
+# Drafted 2026-11-16 from the first 30 pool recipes' ingredient names and the 2026-11-11 price
+# snapshot (Aldi Chisholm, Woolworths via hotprices). Ids are store product ids; a list means
+# "any of these, whichever is cheapest for the amount" (meat by price per kg, since leftovers
+# are frozen; everything else by checkout cost).
+#
+# Conversions (each_g, ml_per_g, count_per_pack) are rough kitchen figures: a cup is 250 ml,
+# so ml_per_g = 250 / grams in a cup.
+#
+# New names from later crawls: .venv/bin/python shopping/meals/shortlist.py --unmapped
+
+# --- Pantry: always in the cupboard, costs nothing, never on the list ----------------------
+# Agreed 2026-11-15: seasonings, oils, vinegars, sauces and condiments, flour, sugar, stock
+# powder, and rice (bought in 5 kg bags). Garlic and ginger are here as jars of minced garlic
+# and crushed ginger, which are the cheapest form and last weeks.
+
+salt: {pantry: true}
+salt to taste: {pantry: true}
+pepper: {pantry: true}
+black pepper: {pantry: true}
+salt and pepper: {pantry: true}
+white pepper: {pantry: true}
+black peppercorns or 1 2 tbsp ground black pepper: {pantry: true}
+lemon pepper: {pantry: true}
+water: {pantry: true}
+boiling water: {pantry: true}
+spray oil: {pantry: true}
+oil: {pantry: true}
+olive oil: {pantry: true}
+extra virgin olive oil: {pantry: true}
+olive oil 1 2 tbsp extra olive oil: {pantry: true}
+vegetable oil: {pantry: true}
+vegetable or peanut oil: {pantry: true}
+coconut oil: {pantry: true}
+sesame oil: {pantry: true}
+butter: {pantry: true}
+melted butter: {pantry: true}
+flour: {pantry: true}
+self raising flour: {pantry: true}
+cornstarch cornflour: {pantry: true}
+sugar: {pantry: true}
+white sugar: {pantry: true}
+brown sugar: {pantry: true}
+palm sugar: {pantry: true}
+coconut sugar: {pantry: true}
+honey: {pantry: true}
+jam: {pantry: true}
+soy sauce: {pantry: true}
+fish sauce: {pantry: true}
+hoisin sauce: {pantry: true}
+oyster sauce: {pantry: true}
+worcestershire sauce: {pantry: true}
+tabasco sauce: {pantry: true}
+chilli sauce: {pantry: true}
+chilli garlic sauce or sriracha: {pantry: true}
+sriracha or any other hot sauce: {pantry: true}
+teriyaki sauce marinade: {pantry: true}
+real chinese all purpose stir fry sauce: {pantry: true}
+tomato ketchup: {pantry: true}
+tomato ketchup or sauce: {pantry: true}
+tomato paste: {pantry: true}
+dijon mustard: {pantry: true}
+tamarind puree: {pantry: true}
+lemon juice: {pantry: true}
+white vinegar: {pantry: true}
+white wine vinegar: {pantry: true}
+balsamic vinegar: {pantry: true}
+chinese cooking wine: {pantry: true}
+japanese cooking wine: {pantry: true}
+mirin: {pantry: true}
+garlic: {pantry: true}
+garlic powder: {pantry: true}
+onion powder: {pantry: true}
+fresh ginger: {pantry: true}
+paprika: {pantry: true}
+sweet paprika: {pantry: true}
+cayenne pepper: {pantry: true}
+chili powder: {pantry: true}
+cumin powder: {pantry: true}
+ground cumin: {pantry: true}
+ground coriander: {pantry: true}
+ground cardamon: {pantry: true}
+cinnamon powder: {pantry: true}
+stick cinnamon: {pantry: true}
+fennel seeds: {pantry: true}
+saffron powder: {pantry: true}
+dried thyme: {pantry: true}
+dried oregano: {pantry: true}
+dried mixed italian herbs: {pantry: true}
+bay leaf: {pantry: true}
+dried red chili flakes: {pantry: true}
+rice: {pantry: true}
+white rice: {pantry: true}
+jasmine rice: {pantry: true}
+basmati rice: {pantry: true}
+long grain white rice: {pantry: true}
+chicken stock powder: {pantry: true}
+# Neither price list has alcohol, so cooking wine and beer can't be costed: left as pantry.
+white wine: {pantry: true}
+marsala: {pantry: true}
+bottle dark beer: {pantry: true}
+oz 330ml sweet apple cider: {pantry: true}
+# Neither store lists it; an Asian grocer does. Costed at nothing rather than blocking the recipe.
+dried shrimp: {pantry: true}
+
+# --- Meat and protein (cut = protein.yaml key; freezable, so cheapest per kg wins) ------------
+
+chicken breast:
+  aldi: ["000000000000399727", "000000000000401713"]   # bulk pack per kg / per kg
+  woolworths: ["710953", "6078623"]                    # per kg / 650 g
+  coles: ["1003370", "2263168"]                        # value pack per kg / small pack per kg
+  cut: chicken breast
+  each_g: 250
+chicken thigh fillet:
+  aldi: ["000000000000599030", "000000000000401598"]
+  woolworths: ["77038", "6078692"]
+  coles: ["2263328", "2263317"]                        # large pack per kg / small pack per kg
+  cut: chicken thigh fillet
+  each_g: 125
+whole chicken:
+  aldi: ["000000000000405544"]
+  coles: ["2782438"]
+  cut: whole chicken
+  each_g: 1600
+beef mince:
+  aldi: ["000000000000399119", "000000000000399764"]
+  woolworths: ["577864", "577863"]
+  coles: ["7677408", "9012825", "9012814"]             # 2 kg / 1 kg / 500 g
+  cut: beef mince
+pork mince:
+  aldi: ["000000000000650965", "000000000000650480"]
+  woolworths: ["169853", "582608"]
+  coles: ["1436089", "8781518"]
+  cut: pork mince
+pork loin:
+  aldi: ["000000000000399791"]                         # loin chops per kg
+  woolworths: ["829116"]
+  coles: ["1134793", "1532752"]                        # loin chops per kg / steaks 500 g
+  cut: pork loin
+  each_g: 200
+pork fillet:
+  aldi: ["000000000000399780"]
+  coles: ["2359370"]
+  cut: pork loin
+  each_g: 500
+pork ribs:
+  aldi: ["000000000000400091"]
+  coles: ["3035293"]                                   # spare ribs per kg
+  freezes: true
+# Neither store lists lamb shoulder this week; boneless lamb leg is the nearest.
+lamb shoulder:
+  aldi: ["000000000000399840"]
+  coles: ["9206800"]                                   # Coles: boneless shoulder roast
+  cut: lamb leg
+lamb mince:
+  woolworths: ["6084212"]
+  coles: ["8850461"]
+  cut: lamb mince
+prawns:
+  aldi: ["000000000000473967", "000000000000332930"]
+  woolworths: ["6026465"]
+  coles: ["3984438", "1678088"]
+  cut: prawns
+bacon:
+  aldi: ["000000000000398931", "000000000000405667"]
+  woolworths: ["273259", "48358"]
+  coles: ["2819312", "8559688"]
+  freezes: true
+  each_g: 40
+prosciutto:
+  aldi: ["000000000000401920"]
+  woolworths: ["546295"]
+  coles: ["3913101"]
+  each_g: 15
+firm tofu:
+  aldi: ["000000000000398430"]
+  woolworths: ["119028", "23038"]
+  coles: ["2752255", "1093007"]
+  cut: firm tofu
+  each_g: 450
+eggs:
+  aldi: ["000000000000399451"]
+  woolworths: ["165367"]
+  coles: ["5178633"]
+  each_g: 58
+
+# --- Fruit and veg -------------------------------------------------------------------------
+
+brown onion:
+  aldi: ["000000000000380210"]
+  woolworths: ["144329", "144427"]
+  coles: ["4803991", "4239517"]
+  each_g: 150
+  ml_per_g: 1.6
+red onion:
+  aldi: ["000000000000583536"]
+  woolworths: ["144497", "124751"]
+  coles: ["8467604", "4218459"]
+  each_g: 150
+  ml_per_g: 1.6
+spring onion:
+  aldi: ["000000000000380327"]
+  woolworths: ["147603"]
+  coles: ["408419"]
+  count_per_pack: 8
+  each_g: 120
+  ml_per_g: 4
+potato:
+  aldi: ["000000000000380363", "000000000000380355"]
+  woolworths: ["101638", "208895"]
+  coles: ["1206748"]
+  each_g: 200
+baby potatoes:
+  woolworths: ["385085", "385086"]
+  coles: ["2488485", "2488500"]
+  aldi: ["000000000000380355"]                         # no baby potatoes at Aldi: washed reds
+  each_g: 40
+carrot:
+  aldi: ["000000000000380228"]
+  woolworths: ["135344"]
+  coles: ["9006560", "4223335"]
+  each_g: 120
+  ml_per_g: 1.9
+red capsicum:
+  aldi: ["000000000000380294", "000000000000380224"]
+  woolworths: ["135306"]
+  coles: ["4580208"]
+  each_g: 160
+  ml_per_g: 1.7
+zucchini:
+  aldi: ["000000000000380380", "000000000000380378"]
+  woolworths: ["170225"]
+  coles: ["4910506"]
+  each_g: 200
+avocado:
+  aldi: ["000000000000380094", "000000000000380092"]
+  woolworths: ["594774", "120080"]
+  coles: ["3479297", "5900530"]
+  each_g: 200
+broccoli:
+  aldi: ["000000000000365822", "000000000000380208"]
+  woolworths: ["134681"]
+  coles: ["407755"]
+  each_g: 350
+  ml_per_g: 2.8
+chinese cabbage:
+  aldi: ["000000000000380220"]                         # half cabbage; no wombok at Aldi
+  woolworths: ["170154", "170127"]
+  coles: ["4456832", "4879042"]
+  each_g: 500
+  ml_per_g: 3.5
+mushrooms:
+  aldi: ["000000000000380368", "000000000000380369"]
+  woolworths: ["143109", "143304"]
+  coles: ["4829838", "4829860"]
+  each_g: 15
+  ml_per_g: 3.5
+tomato:
+  aldi: ["000000000000380349", "000000000000380347"]
+  woolworths: ["169438"]
+  coles: ["4628676"]
+  each_g: 120
+  ml_per_g: 1.4
+bean sprouts:
+  woolworths: ["133687"]
+  coles: ["4544770"]
+  ml_per_g: 2.5
+corn kernels:
+  aldi: ["000000000000367885", "000000000000365103"]
+  woolworths: ["218926"]
+  coles: ["4774066"]
+  each_g: 420
+  ml_per_g: 1.6
+frozen mixed vegetables:
+  aldi: ["000000000000365539"]
+  coles: ["7489339"]
+  ml_per_g: 1.8
+lemon:
+  aldi: ["000000000000364043", "000000000000380128"]
+  woolworths: ["259514"]
+  coles: ["5318302", "1866747"]
+  each_g: 120
+lime:
+  aldi: ["000000000000380130"]
+  woolworths: ["245902"]
+  coles: ["197594"]
+  each_g: 70
+long red chilli:
+  woolworths: ["136510"]
+  coles: ["1501635"]
+  each_g: 10
+birds eye chilli:
+  woolworths: ["136341"]
+  coles: ["3938860"]
+  each_g: 3
+jalapeno:
+  aldi: ["000000000000369527", "000000000000380106"]
+  woolworths: ["6039972", "126772"]
+  coles: ["6739441", "1501453"]
+  each_g: 20
+  ml_per_g: 1.7
+lemongrass:
+  woolworths: ["707362"]
+  coles: ["5747863"]
+  count_per_pack: 2
+  each_g: 15
+kaffir lime leaves:
+  woolworths: ["707373"]
+  coles: ["1116703"]
+  count_per_pack: 20
+  each_g: 0.5
+
+# Herb bunches: a bunch is about 60 g, and a cup of chopped leaves about 30 g.
+parsley:
+  aldi: ["000000000000380252"]
+  woolworths: ["144785", "144784"]
+  coles: ["4575161", "4575569"]
+  each_g: 60
+  ml_per_g: 8
+coriander:
+  aldi: ["000000000000380253"]
+  woolworths: ["137091"]
+  coles: ["4575321"]
+  each_g: 60
+  ml_per_g: 8
+mint:
+  aldi: ["000000000000380152"]
+  woolworths: ["142948"]
+  coles: ["4575514"]
+  each_g: 60
+  ml_per_g: 8
+sage:
+  woolworths: ["707369"]
+  coles: ["3215138"]
+  count_per_pack: 20
+  each_g: 10
+  ml_per_g: 8
+tarragon:
+  woolworths: ["6012354"]                              # dried; no fresh tarragon listed
+  coles: ["9467268"]                                   # dried
+  ml_per_g: 8
+
+# --- Dairy --------------------------------------------------------------------------------
+
+milk:
+  aldi: ["000000000000398689", "000000000000398691"]
+  woolworths: ["888137", "50923"]
+  coles: ["439693", "9052681"]
+greek yoghurt:
+  aldi: ["000000000000398974", "000000000000405487"]
+  woolworths: ["571487"]
+  coles: ["1856594", "1856561"]
+  ml_per_g: 0.95
+grated cheese:
+  aldi: ["000000000000403391"]
+  woolworths: ["17497"]
+  coles: ["8145335"]
+  ml_per_g: 2.5
+grated mozzarella cheese:
+  aldi: ["000000000000403442"]
+  woolworths: ["6001736"]
+  coles: ["1413334"]
+  ml_per_g: 2.5
+parmesan:
+  aldi: ["000000000000399737", "000000000000403660"]
+  woolworths: ["29197"]
+  coles: ["5726014"]
+  ml_per_g: 2.8
+feta cheese:
+  aldi: ["000000000000402044", "000000000000402021"]
+  woolworths: ["452083", "452086"]
+  coles: ["9808755", "9808405"]
+  ml_per_g: 1.7
+ricotta:
+  aldi: ["000000000000399291"]
+  woolworths: ["474591"]
+  coles: ["2212666"]
+  ml_per_g: 1.0
+
+# --- Tins, jars and stock (a "can" in a recipe is about 400 g) -----------------------------
+
+crushed tomato:
+  aldi: ["000000000000380347"]
+  woolworths: ["230392", "77884"]
+  coles: ["5548754", "4687074"]                        # Coles: own-brand diced, or Ardmona crushed
+  each_g: 400
+  ml_per_g: 1.0
+tomato passata:
+  woolworths: ["65395"]
+  coles: ["5419718"]
+  aldi: ["000000000000380347"]                         # no passata at Aldi: crushed tomatoes
+  each_g: 700
+  ml_per_g: 1.0
+black beans:
+  aldi: ["000000000000459671"]
+  woolworths: ["907377"]
+  coles: ["3812975"]
+  each_g: 420
+  ml_per_g: 1.4
+kidney beans:
+  aldi: ["000000000000470265"]
+  woolworths: ["907049"]
+  coles: ["8075874"]
+  each_g: 420
+  ml_per_g: 1.4
+canned creamed corn:
+  aldi: ["000000000000682456"]
+  woolworths: ["492070"]
+  coles: ["340472"]
+  each_g: 420
+  ml_per_g: 1.0
+chipotle in adobo:
+  woolworths: ["112750", "494324"]
+  coles: ["2373530"]
+  each_g: 200
+light coconut milk:
+  aldi: ["000000000635295002"]
+  woolworths: ["684033"]
+  coles: ["4224677"]
+  each_g: 400
+  ml_per_g: 1.0
+enchilada sauce:
+  woolworths: ["19977"]
+  coles: ["7395450"]
+  each_g: 375
+  ml_per_g: 1.0
+chicken stock:
+  aldi: ["000000000000366613", "000000000000751049"]
+  woolworths: ["310251"]
+  coles: ["7152073"]
+beef stock:
+  aldi: ["000000000000581264"]
+  woolworths: ["310253"]
+  coles: ["7152062"]
+
+# --- Pasta, noodles, bread ----------------------------------------------------------------
+
+spaghetti:
+  aldi: ["000000000000656172"]
+  woolworths: ["346830"]
+  coles: ["3328972", "9478865"]
+couscous:
+  woolworths: ["103275"]
+  coles: ["6079397"]
+  ml_per_g: 1.3
+giant couscous:
+  woolworths: ["815768", "62992"]
+  coles: ["3611601"]
+  ml_per_g: 1.5
+rice noodles:
+  aldi: ["000000000532178002"]
+  woolworths: ["313632"]
+  coles: ["6073018", "5252328"]
+egg noodles:
+  aldi: ["000000000000598803"]
+  woolworths: ["807432", "145566"]
+  coles: ["1384316", "8679624", "5578256"]
+tortillas:
+  woolworths: ["333915", "6024807"]
+  coles: ["2372301"]                                   # 10 pack, 400 g
+  each_g: 40
+panko:
+  aldi: ["000000000000499171", "000000000000399315"]
+  woolworths: ["702323"]
+  coles: ["4324875", "5016303"]
+  ml_per_g: 4.2
+polenta:
+  woolworths: ["24883"]
+  coles: ["4687143", "8605027"]
+  ml_per_g: 1.6
+bread rolls:
+  aldi: ["000000000000398962"]
+  woolworths: ["6080441"]
+  coles: ["7210680", "7170949"]
+  each_g: 75
+white bread:
+  aldi: ["000000000000398871"]
+  woolworths: ["277728"]
+  coles: ["4901345"]
+  each_g: 40
+  ml_per_g: 5
+
+# --- Nuts and dried fruit -----------------------------------------------------------------
+
+peanuts:
+  woolworths: ["598179"]
+  coles: ["7540946"]
+  aldi: ["000000000000371061"]                         # salted; no unsalted at Aldi
+  ml_per_g: 1.7
+sultanas:
+  aldi: ["000000000000365039"]
+  woolworths: ["95055"]
+  coles: ["5357632", "5071312"]
+  ml_per_g: 1.7
+
+# --- Other names for the same things ------------------------------------------------------
+
+chicken breast fillet: {same_as: chicken breast}
+chicken: {same_as: chicken breast}
+chicken thigh fillets: {same_as: chicken thigh fillet}
+chicken thighs: {same_as: chicken thigh fillet}
+chicken thighs boneless skinless or breast: {same_as: chicken thigh fillet}
+ground beef: {same_as: beef mince}
+lamb or beef mince: {same_as: beef mince}
+ground pork: {same_as: pork mince}
+pork cutlets: {same_as: pork loin}
+pork tenderloin: {same_as: pork fillet}
+lb 500g pork tenderloin: {same_as: pork fillet}
+american style pork ribs: {same_as: pork ribs}
+raw shrimp: {same_as: prawns}
+bacon rashers: {same_as: bacon}
+thin slices of prosciutto: {same_as: prosciutto}
+
+onion: {same_as: brown onion}
+brown onions: {same_as: brown onion}
+small brown onion: {same_as: brown onion, each_g: 100}
+small onion: {same_as: brown onion, each_g: 100}
+large onion: {same_as: brown onion, each_g: 220}
+finely chopped shallots or onion: {same_as: brown onion}
+small red onion: {same_as: red onion, each_g: 100}
+small red shallot: {same_as: red onion, each_g: 40}
+scallions: {same_as: spring onion}
+scallion shallot stems: {same_as: spring onion}
+shallot scallion stems: {same_as: spring onion}
+garlic chives: {same_as: spring onion}
+potatoes: {same_as: potato}
+large potatoes: {same_as: potato, each_g: 300}
+small carrots: {same_as: carrot, each_g: 70}
+small red capsicum: {same_as: red capsicum, each_g: 120}
+diced red bell pepper capsicum: {same_as: red capsicum}
+zucchinis: {same_as: zucchini}
+broccoli florets: {same_as: broccoli}
+shredded chinese cabbage: {same_as: chinese cabbage}
+corn: {same_as: corn kernels}
+lemons: {same_as: lemon}
+small lemon: {same_as: lemon, each_g: 90}
+lemon slices: {same_as: lemon}
+lemon wedges or cheeks: {same_as: lemon}
+zest of 1 small lemon: {same_as: lemon, each_g: 90}
+lime wedges: {same_as: lime}
+juice of 1 lime: {same_as: lime}
+long red chilies: {same_as: long red chilli}
+birds eye chilis: {same_as: birds eye chilli}
+diced jalape o: {same_as: jalapeno}
+stalk lemongrass: {same_as: lemongrass}
+garlic cloves: {same_as: garlic}
+garlic clove: {same_as: garlic}
+garlic clove minced: {same_as: garlic}
+minced garlic: {same_as: garlic}
+freshly grated ginger: {same_as: fresh ginger}
+
+fresh parsley: {same_as: parsley}
+finely chopped parsley: {same_as: parsley}
+fresh parsley or coriander: {same_as: parsley}
+fresh thyme leaves or finely chopped parsley: {same_as: parsley}
+thyme or 1 tsp dried thyme leaves: {same_as: dried thyme}
+dried thyme leaves: {same_as: dried thyme}
+mixed italian dried herbs: {same_as: dried mixed italian herbs}
+red pepper flakes: {same_as: dried red chili flakes}
+fresh coriander cilantro leaves: {same_as: coriander}
+coriander cilantro: {same_as: coriander}
+finely chopped cilantro coriander leaves: {same_as: coriander}
+baby mint leaves: {same_as: mint}
+mint leaves: {same_as: mint}
+mint and coriander leaves roughly chopped: {same_as: mint}
+finely sliced fresh sage leaves: {same_as: sage}
+loosely packed fresh sage leaves: {same_as: sage}
+tarragon leaves: {same_as: tarragon}
+
+low fat milk: {same_as: milk}
+milk or cream: {same_as: milk}
+yoghurt: {same_as: greek yoghurt}
+cream: {same_as: greek yoghurt}
+sour cream: {same_as: greek yoghurt}
+shredded cheese: {same_as: grated cheese}
+parmesan cheese: {same_as: parmesan}
+grated parmesan cheese: {same_as: parmesan}
+freshly grated parmesan: {same_as: parmesan}
+freshly grated parmesan cheese: {same_as: parmesan}
+
+can crushed tomato: {same_as: crushed tomato}
+canned crushed tomato: {same_as: crushed tomato}
+tomato passata or crushed tinned tomatoes: {same_as: tomato passata}
+tinned black beans or red kidney beans: {same_as: kidney beans}
+can chipotle in adobo sauce: {same_as: chipotle in adobo}
+chicken broth: {same_as: chicken stock}
+chicken broth stock: {same_as: chicken stock}
+chicken stock broth: {same_as: chicken stock}
+beef stock broth: {same_as: beef stock}
+
+dried spaghetti: {same_as: spaghetti}
+dried pad thai rice noodles: {same_as: rice noodles}
+fresh chow mein egg noodles: {same_as: egg noodles}
+fresh chow mein noodles: {same_as: egg noodles}
+polenta cornmeal: {same_as: polenta}
+soft white bread rolls: {same_as: bread rolls}
+thick slice white sandwich bread: {same_as: white bread}
+stale white bread: {same_as: white bread}
+roasted unsalted peanuts: {same_as: peanuts}
+dried currants or sultanas: {same_as: sultanas}
+
+# --- Added 2026-11-16 after the crawl reached 536 recipes (pool 195) ------------------------
+
+# More pantry
+ginger: {pantry: true}
+light soy sauce: {pantry: true}
+dark soy sauce: {pantry: true}
+kecap manis: {pantry: true}
+cooking salt: {pantry: true}
+kosher salt: {pantry: true}
+cooking salt kosher salt: {pantry: true}
+cooking kosher salt: {pantry: true}
+sesame seeds: {pantry: true}
+white sesame seeds: {pantry: true}
+apple cider vinegar: {pantry: true}
+cider vinegar: {pantry: true}
+rice vinegar: {pantry: true}
+cumin: {pantry: true}
+cumin seeds: {pantry: true}
+coriander powder: {pantry: true}
+coriander seeds: {pantry: true}
+turmeric: {pantry: true}
+turmeric powder: {pantry: true}
+ground turmeric: {pantry: true}
+cinnamon: {pantry: true}
+ground cinnamon: {pantry: true}
+cinnamon sticks: {pantry: true}
+cloves: {pantry: true}
+ground cloves: {pantry: true}
+ground nutmeg: {pantry: true}
+ground cardamom: {pantry: true}
+all spice powder: {pantry: true}
+star anise: {pantry: true}
+chinese five spice powder: {pantry: true}
+curry powder: {pantry: true}
+garam masala: {pantry: true}
+garam marsala: {pantry: true}
+kashmiri chilli powder: {pantry: true}
+chilli powder: {pantry: true}
+chilli flakes: {pantry: true}
+dried chillies: {pantry: true}
+smoked paprika: {pantry: true}
+paprika powder: {pantry: true}
+mustard powder: {pantry: true}
+whole grain mustard: {pantry: true}
+black mustard seeds: {pantry: true}
+bay leaves: {pantry: true}
+dried bay leaves: {pantry: true}
+cornflour: {pantry: true}
+plain flour: {pantry: true}
+baking soda: {pantry: true}
+lime juice: {pantry: true}
+ketchup: {pantry: true}
+tomato sauce: {pantry: true}
+sriracha: {pantry: true}
+tabasco: {pantry: true}
+molasses: {pantry: true}
+peanut butter: {pantry: true}
+peanut oil: {pantry: true}
+canola oil: {pantry: true}
+cooking oil: {pantry: true}
+ghee: {pantry: true}
+crispy fried shallots: {pantry: true}
+fried asian shallots: {pantry: true}
+baby capers: {pantry: true}
+anchovy fillets: {pantry: true}
+beef bouillon cubes: {pantry: true}
+lemongrass paste: {pantry: true}
+long grain rice: {pantry: true}
+cooked rice: {pantry: true}
+steamed jasmine rice: {pantry: true}
+red wine: {pantry: true}
+dry red wine: {pantry: true}
+dry white wine: {pantry: true}
+beer: {pantry: true}
+skewers: {pantry: true}          # not food
+
+# More to buy
+coconut milk:
+  aldi: ["000000000635295001", "000000000000607981"]
+  woolworths: ["189725"]
+  coles: ["3924527"]
+  each_g: 400
+  ml_per_g: 1.0
+coconut cream:
+  aldi: ["000000000635335001"]
+  woolworths: ["189726"]
+  coles: ["5357676"]
+  each_g: 400
+  ml_per_g: 1.0
+frozen peas:
+  aldi: ["000000000000365543"]
+  woolworths: ["96845"]
+  coles: ["399067"]
+  ml_per_g: 1.8
+chicken drumsticks:
+  aldi: ["000000000000399018", "000000000000532458"]
+  woolworths: ["268605", "23208"]
+  coles: ["2263260", "2923835"]
+  cut: chicken drumstick
+  each_g: 150
+chicken thigh cutlets:                                   # bone in
+  aldi: ["000000000000402023"]
+  woolworths: ["354118"]
+  coles: ["2268365"]
+  cut: chicken thigh cutlet
+  each_g: 170
+salmon:
+  aldi: ["000000000000405629", "000000000000403239"]
+  woolworths: ["259832", "126497"]
+  coles: ["1063006"]
+  cut: salmon
+  each_g: 115
+white fish:
+  aldi: ["000000000000279936"]
+  woolworths: ["445352"]
+  coles: ["3984460", "7108785"]
+  cut: white fish
+  each_g: 150
+beef chuck:
+  aldi: ["000000000000401302", "000000000000399759"]
+  coles: ["1773726", "7820986"]                          # casserole steak 1 kg / chuck roast per kg
+  cut: beef chuck
+chorizo:
+  aldi: ["000000000000399811"]
+  woolworths: ["912636"]
+  coles: ["2531664", "6998745"]
+  freezes: true
+  each_g: 110
+celery:
+  aldi: ["000000000000380236"]
+  woolworths: ["135918"]
+  coles: ["4845732"]
+  count_per_pack: 10                                     # stalks in a bunch
+  each_g: 400
+  ml_per_g: 2.1
+green beans:
+  aldi: ["000000000000365314"]
+  woolworths: ["218869"]
+  coles: ["4829204"]                                     # Coles: fresh
+  ml_per_g: 2.3
+baby spinach:
+  aldi: ["000000000000380187", "000000000000380188"]
+  woolworths: ["524322", "524336"]
+  coles: ["1499340", "5040396"]
+  ml_per_g: 8
+green cabbage:
+  woolworths: ["134968", "134923"]
+  coles: ["367016"]                                      # half drumhead
+  aldi: ["000000000000380220"]                           # half cabbage
+  each_g: 500
+  ml_per_g: 3.5
+asparagus:
+  aldi: ["000000000000380175"]
+  woolworths: ["132538"]
+  coles: ["4838737"]
+  each_g: 250
+cherry tomatoes:
+  aldi: ["000000000000380240"]
+  woolworths: ["149620"]
+  coles: ["4834736"]
+  each_g: 15
+  ml_per_g: 1.7
+iceberg lettuce:
+  aldi: ["000000000000380100"]
+  woolworths: ["154340"]
+  coles: ["4584071"]
+  each_g: 500
+  ml_per_g: 4
+eggplant:
+  aldi: ["000000000000380265"]
+  woolworths: ["137546"]
+  coles: ["4583206"]
+  each_g: 300
+bok choy:
+  aldi: ["000000000000380163"]
+  woolworths: ["134801"]
+  coles: ["4565907", "4567039"]
+  each_g: 150
+snow peas:
+  aldi: ["000000000000380324"]
+  woolworths: ["145843"]
+  coles: ["7701375"]
+  ml_per_g: 3.5
+green capsicum:
+  aldi: ["000000000000380088"]
+  woolworths: ["135156"]
+  coles: ["7214862"]
+  each_g: 160
+  ml_per_g: 1.7
+eschallot:                                               # French shallot
+  woolworths: ["189459"]
+  coles: ["5134809"]
+  aldi: ["000000000000583536"]                           # no shallots at Aldi: red onion
+  each_g: 30
+chickpeas:
+  aldi: ["000000000000457349"]
+  woolworths: ["907050"]
+  coles: ["8075852"]
+  cut: canned chickpeas
+  each_g: 420
+  ml_per_g: 1.5
+refried beans:
+  aldi: ["000000000601777002"]
+  woolworths: ["187333"]
+  coles: ["2101472"]
+  each_g: 450
+  ml_per_g: 1.0
+vermicelli noodles:
+  aldi: ["000000000532178001"]
+  woolworths: ["87453"]
+  coles: ["3735660"]
+naan:
+  aldi: ["000000000000581229"]
+  woolworths: ["689835"]
+  coles: ["3769990"]
+  each_g: 125
+flatbreads:
+  aldi: ["000000000000560350"]
+  coles: ["1422244"]
+  each_g: 88
+basil:
+  aldi: ["000000000000380192"]
+  woolworths: ["250981"]
+  coles: ["4574920", "8984253"]
+  each_g: 40
+  ml_per_g: 8
+thai basil:
+  woolworths: ["707363"]
+  coles: ["3593430"]
+  aldi: ["000000000000380192"]                           # Thai basil not at Aldi: basil
+  each_g: 15
+  ml_per_g: 8
+pineapple juice:
+  aldi: ["000000000000366560"]
+  woolworths: ["59561"]
+  coles: ["4382849"]
+roasted cashews:
+  aldi: ["000000000000370572"]
+  woolworths: ["726352"]
+  coles: ["2123500", "9738456"]
+  ml_per_g: 1.8
+massaman curry paste:
+  aldi: ["000000000677458003"]
+  woolworths: ["354384"]
+  coles: ["1323876"]
+  ml_per_g: 1.0
+thai red curry paste:
+  aldi: ["000000000677458001"]
+  woolworths: ["243694"]
+  coles: ["1323854", "1323800"]
+  ml_per_g: 1.0
+
+# More names for the same things
+unsalted butter: {same_as: butter}
+salted butter: {same_as: butter}
+oil spray: {same_as: spray oil}
+cornflour cornstarch: {same_as: cornstarch cornflour}
+cornflour corn starch: {same_as: cornstarch cornflour}
+coriander cilantro leaves: {same_as: coriander}
+cilantro coriander leaves: {same_as: coriander}
+parsley leaves: {same_as: parsley}
+egg: {same_as: eggs}
+green onion: {same_as: spring onion}
+green onions: {same_as: spring onion}
+green onion stems: {same_as: spring onion}
+green onion stem: {same_as: spring onion}
+scallions shallots: {same_as: spring onion}
+eschallots: {same_as: eschallot}
+panko breadcrumbs: {same_as: panko}
+thickened heavy cream: {same_as: greek yoghurt}
+heavy thickened cream: {same_as: greek yoghurt}
+plain yoghurt: {same_as: greek yoghurt}
+red capsicum bell pepper: {same_as: red capsicum}
+green capsicum bell pepper: {same_as: green capsicum}
+chicken thigh: {same_as: chicken thigh fillet}
+chicken thighs bone in skin on: {same_as: chicken thigh cutlets}
+shredded cooked chicken: {same_as: chicken breast}
+beef mince ground beef: {same_as: beef mince}
+salmon fillets: {same_as: salmon}
+celery ribs: {same_as: celery}
+sliced red chilli: {same_as: long red chilli}
+red chilli: {same_as: long red chilli}
+red chillies: {same_as: long red chilli}
+large red chillis: {same_as: long red chilli}
+finely sliced red chilli: {same_as: long red chilli}
+red birds eye chilli: {same_as: birds eye chilli}
+birds eye chillis: {same_as: birds eye chilli}
+cheese: {same_as: grated cheese}
+mozzarella: {same_as: grated mozzarella cheese}
+shredded mozzarella cheese: {same_as: grated mozzarella cheese}
+streaky bacon: {same_as: bacon}
+chilli flakes red pepper flakes: {same_as: chilli flakes}
+cinnamon stick: {same_as: cinnamon sticks}
+garlic crushed: {same_as: garlic}
+piece of ginger: {same_as: ginger}
+sprigs thyme: {same_as: dried thyme}
+thyme sprigs: {same_as: dried thyme}
+sprigs of thyme: {same_as: dried thyme}
+thyme leaves: {same_as: dried thyme}
+fresh thyme leaves: {same_as: dried thyme}
+rosemary sprigs: {pantry: true}
+beef broth: {same_as: beef stock}
+beef broth stock: {same_as: beef stock}
+chow mein noodles: {same_as: egg noodles}
+hokkien noodles: {same_as: egg noodles}
+dried rice noodles: {same_as: rice noodles}
+soft tortillas: {same_as: tortillas}
+beansprouts: {same_as: bean sprouts}
+frozen corn: {same_as: corn kernels}
+can chickpeas: {same_as: chickpeas}
+prawns shrimp: {same_as: prawns}
+sriracha sauce: {same_as: sriracha}
+tomato sauce or ketchup: {same_as: ketchup}
+chardonnay or other dry white wine: {same_as: dry white wine}
+thai basil leaves: {same_as: thai basil}
+basil leaves: {same_as: basil}
+bunches asparagus: {same_as: asparagus}
+bok choys: {same_as: bok choy}
+maesri massaman curry paste: {same_as: massaman curry paste}
+each black pepper onion powder mustard powder: {pantry: true}
+
+# Pasta: any short shape is the cheapest plain pasta (agreed: always the cheaper option).
+pasta:
+  aldi: ["000000000000654409", "000000000000656172"]
+  woolworths: ["188800", "346830"]
+  coles: ["3329104", "3328972"]
+  ml_per_g: 2.5
+risoni:
+  woolworths: ["98567"]
+  coles: ["8437115"]
+  aldi: ["000000000000654409"]                           # no risoni at Aldi: penne
+  ml_per_g: 1.3
+puff pastry:
+  aldi: ["000000000000750122"]
+  woolworths: ["18366"]
+  coles: ["450550"]
+  each_g: 170                                            # a sheet
+canned tuna:
+  aldi: ["000000000371512001", "000000000200924003"]
+  woolworths: ["6047799"]
+  coles: ["8675270", "8675260"]
+  cut: canned tuna
+  each_g: 185
+burger buns:
+  aldi: ["000000000000402224"]
+  woolworths: ["726067"]
+  coles: ["7205679"]                                     # Coles: bakery hamburger rolls
+  each_g: 80
+kalamata olives:
+  aldi: ["000000000310422001"]
+  coles: ["9051612"]
+  ml_per_g: 1.7
+slivered almonds:
+  aldi: ["000000000706231002"]
+  woolworths: ["726350"]
+  coles: ["2749432"]
+  ml_per_g: 2.3
+orange juice:
+  aldi: ["000000000000399268", "000000000000400439"]
+  woolworths: ["825528"]
+  coles: ["2531551"]
+sun dried tomatoes:
+  aldi: ["000000000582657003"]
+  coles: ["6481444", "7828944"]
+  ml_per_g: 1.9
+arborio rice:
+  aldi: ["000000000000634898"]
+  woolworths: ["6047162"]
+  coles: ["8465788"]
+  ml_per_g: 1.2
+kale:
+  aldi: ["000000000000380109"]
+  woolworths: ["380338"]
+  coles: ["8696598"]
+  each_g: 250
+  ml_per_g: 8
+broccolini:
+  woolworths: ["187314"]
+  coles: ["5982477"]                                     # Coles: baby broccoli bunch
+  aldi: ["000000000000634931"]                           # Aldi: baby broccoli bunch
+  each_g: 175
+choy sum:
+  woolworths: ["136979"]
+  coles: ["4567323"]
+  aldi: ["000000000000380163"]                           # Aldi: pak choy
+  each_g: 200
+dried apricots:
+  aldi: ["000000000000365542"]
+  woolworths: ["18158"]
+  coles: ["2749400"]
+  ml_per_g: 1.9
+corn chips:
+  aldi: ["000000000000525574"]
+  woolworths: ["340997"]
+  coles: ["6696407"]
+gherkins:
+  woolworths: ["18046"]
+  coles: ["259498"]
+  each_g: 40
+cos lettuce:
+  aldi: ["000000000000380180"]
+  woolworths: ["141496"]
+  coles: ["4646485"]
+  count_per_pack: 2
+  each_g: 250
+
+penne pasta: {same_as: pasta}
+penne: {same_as: pasta}
+rigatoni: {same_as: pasta}
+ziti: {same_as: pasta}
+fusilli: {same_as: pasta}
+macaroni: {same_as: pasta}
+elbow macaroni pasta: {same_as: pasta}
+elbow pasta: {same_as: pasta}
+spiral pasta: {same_as: pasta}
+small pasta shells: {same_as: pasta}
+pasta of choice: {same_as: pasta}
+dried ziti penne pasta: {same_as: pasta}
+fusilli penne elbow macaroni: {same_as: pasta}
+dried risoni orzo: {same_as: risoni}
+dried orzo risoni: {same_as: risoni}
+orzo: {same_as: risoni}
+sheet puff pastry: {same_as: puff pastry}
+sheets puff pastry: {same_as: puff pastry}
+canned tuna in oil: {same_as: canned tuna}
+can chunk tuna: {same_as: canned tuna}
+soft burger buns or rolls: {same_as: burger buns}
+pitted kalamata olives: {same_as: kalamata olives}
+roughly chopped sun dried tomatoes: {same_as: sun dried tomatoes}
+sun dried tomato strips: {same_as: sun dried tomatoes}
+risotto rice: {same_as: arborio rice}
+kale leaves: {same_as: kale}
+bunch broccolini: {same_as: broccolini}
+dried apricot: {same_as: dried apricots}
+large gherkins: {same_as: gherkins}
+cos romaine lettuce leaves: {same_as: cos lettuce}
+fish fillets: {same_as: white fish}
+white fish fillets: {same_as: white fish}
+firm white fish fillets: {same_as: white fish}
+firm fleshed white fish: {same_as: white fish}
+barramundi fillets: {same_as: white fish}
+shrimp prawns: {same_as: prawns}
+white mushrooms: {same_as: mushrooms}
+capsicums bell peppers: {same_as: red capsicum}
+capsicum bell pepper: {same_as: red capsicum}
+creamed corn: {same_as: canned creamed corn}
+capers in brine: {same_as: baby capers}
+fried shallots: {same_as: crispy fried shallots}
+beef bouillon cube: {same_as: beef bouillon cubes}
+green cardamon pods: {pantry: true}
+cardamom pods: {pantry: true}
+
+# --- Added 2026-11-16 after the full crawl (1,505 recipes, pool 487) ------------------------
+chicken mince:
+  aldi: ["000000000000704573", "000000000000401545"]
+  woolworths: ["321099", "360563"]
+  coles: ["4352145"]
+  cut: chicken mince
+pork shoulder:
+  aldi: ["000000000000543801"]
+  coles: ["9413881"]
+  cut: pork shoulder
+mozzarella cheese:
+  aldi: ["000000000000401611"]
+  woolworths: ["688515"]
+  coles: ["1413334"]                                     # Coles: shredded; no block
+  ml_per_g: 2.5
+cucumber:
+  aldi: ["000000000000380251"]
+  woolworths: ["137130", "137102"]
+  coles: ["4575605", "4559314"]
+  each_g: 250
+dill:
+  aldi: ["000000000000628558"]
+  woolworths: ["251009"]
+  coles: ["3214769"]
+  each_g: 20
+  ml_per_g: 8
+lentils:                                                  # canned
+  aldi: ["000000000000710273"]
+  woolworths: ["907051"]
+  coles: ["4774113"]
+  cut: canned lentils
+  each_g: 420
+  ml_per_g: 1.4
+
+fettuccine: {same_as: pasta}
+cucumbers: {same_as: cucumber}
+fresh dill: {same_as: dill}
+celery sticks: {same_as: celery}
+celery stick: {same_as: celery}
+starchy potatoes: {same_as: potato}
+canned lentils: {same_as: lentils}
+chardonnay: {pantry: true}
+red wine vinegar: {pantry: true}
+dried red chillies: {same_as: dried chillies}
+preserved black beans: {pantry: true}
+beef stock cubes: {same_as: beef bouillon cubes}
+beef stock cube: {same_as: beef bouillon cubes}
+chicken stock cubes: {pantry: true}
+sprigs rosemary: {pantry: true}
+rosemary: {pantry: true}
+sprigs fresh thyme: {same_as: dried thyme}
+vegetable stock:
+  aldi: ["000000000000581430"]
+  woolworths: ["310251"]                                 # Woolworths: chicken stock
+  coles: ["7152084"]
+pork sausages:
+  aldi: ["000000000000570535"]
+  coles: ["3569232", "3923761"]
+  freezes: true
+  each_g: 80
+dried cranberries:
+  aldi: ["000000000000365538"]
+  coles: ["2749410"]
+  ml_per_g: 2
+
+thickened cream: {same_as: greek yoghurt}
+side of salmon: {same_as: salmon}
+swiss cheese: {same_as: grated cheese}
+colby cheese: {same_as: grated cheese}
+shredded cheddar cheese: {same_as: grated cheese}
+parmigiano reggiano: {same_as: parmesan}
+pork chops: {same_as: pork loin}
+cabbage: {same_as: green cabbage}
+large head broccoli: {same_as: broccoli}
+cashews: {same_as: roasted cashews}
+egg yolk: {same_as: eggs}
+hard boiled eggs: {same_as: eggs}
+leg of lamb: {same_as: lamb shoulder}
+celery rib: {same_as: celery}
+orzo risoni: {same_as: risoni}
+broken angel hair pasta: {same_as: pasta}
+mayonnaise: {pantry: true}
+whole egg mayonnaise: {pantry: true}
+pinot noir: {pantry: true}
+guinness beer: {pantry: true}
+curry leaves: {pantry: true}
+dried shiitake mushrooms: {pantry: true}

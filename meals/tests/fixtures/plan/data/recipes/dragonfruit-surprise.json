@@ -1,0 +1,34 @@
+{
+ "slug": "dragonfruit-surprise",
+ "url": "https://example.invalid/dragonfruit-surprise/",
+ "title": "Dragonfruit Surprise",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Fusion"
+ ],
+ "keywords": [],
+ "rating": 4.2,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1000,
+   "unit": "g",
+   "name": "chicken thigh",
+   "protein": true
+  },
+  {
+   "amount": 2,
+   "unit": null,
+   "name": "dragonfruit"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "chicken thigh"
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "chicken-yoghurt-bake",
+ "url": "https://example.invalid/chicken-yoghurt-bake/",
+ "title": "Chicken Yoghurt Bake",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Greek"
+ ],
+ "keywords": [],
+ "rating": 4.5,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1200,
+   "unit": "g",
+   "name": "chicken breast",
+   "protein": true
+  },
+  {
+   "amount": 400,
+   "unit": "g",
+   "name": "greek yoghurt"
+  },
+  {
+   "amount": 500,
+   "unit": "g",
+   "name": "pasta"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "chicken breast"
+}

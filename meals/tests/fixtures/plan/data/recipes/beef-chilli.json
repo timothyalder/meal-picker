@@ -1,0 +1,39 @@
+{
+ "slug": "beef-chilli",
+ "url": "https://example.invalid/beef-chilli/",
+ "title": "Beef Chilli",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Mexican"
+ ],
+ "keywords": [],
+ "rating": 4.8,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1000,
+   "unit": "g",
+   "name": "beef mince",
+   "protein": true
+  },
+  {
+   "amount": 800,
+   "unit": "g",
+   "name": "tinned tomatoes"
+  },
+  {
+   "amount": 500,
+   "unit": "g",
+   "name": "rice"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "beef mince"
+}

@@ -1,0 +1,30 @@
+{
+ "slug": "test-chicken-curry", "url": "https://example.invalid/test-chicken-curry", "title": "Test Chicken Curry",
+ "serves": 4,
+ "nutrition": {"calories": 500, "protein_g": 35},
+ "ingredients": [
+  {"amount": 600, "unit": "g", "name": "chicken thigh fillets", "notes": "cut into chunks", "group": "Marinade"},
+  {"amount": 0.5, "unit": "cup", "name": "plain yoghurt", "notes": null, "group": "Marinade"},
+  {"amount": 1, "unit": "tsp", "name": "turmeric", "notes": null, "group": "Marinade"},
+  {"amount": 2, "unit": "tbsp", "name": "vegetable oil", "notes": null, "group": "Curry"},
+  {"amount": 30, "unit": "g", "name": "butter", "notes": null, "group": "Curry"},
+  {"amount": 1, "unit": null, "name": "brown onion", "notes": "finely chopped", "group": "Curry"},
+  {"amount": 3, "unit": null, "name": "garlic cloves", "notes": "minced", "group": "Curry"},
+  {"amount": 2, "unit": "tsp", "name": "chilli powder", "notes": null, "group": "Curry"},
+  {"amount": 1, "unit": "tbsp", "name": "garam masala", "notes": null, "group": "Curry"},
+  {"amount": 400, "unit": "g", "name": "crushed tomatoes", "notes": null, "group": "Curry"},
+  {"amount": 1, "unit": "cup", "name": "chicken stock", "notes": null, "group": "Curry"},
+  {"amount": 200, "unit": "ml", "name": "thickened cream", "notes": null, "group": "Curry"},
+  {"amount": 2, "unit": "tbsp", "name": "brown sugar", "notes": null, "group": "Curry"},
+  {"amount": 2, "unit": "cups", "name": "basmati rice", "notes": "to serve", "group": "Curry"},
+  {"amount": 2, "unit": null, "name": "bay leaves", "notes": null, "group": "Curry"}
+ ],
+ "steps": [
+  "Mix the Marinade ingredients in a bowl and leave for 20 minutes.",
+  "Heat the oil and butter in a large pan and fry the onion and garlic until soft.",
+  "Add the chilli powder and garam masala and cook for 1 minute, then add the chicken.",
+  "Pour in the tomatoes and stock, add the sugar and simmer for 20 minutes.",
+  "Stir through the cream and serve with rice."
+ ],
+ "fetched": "2026-11-15"
+}

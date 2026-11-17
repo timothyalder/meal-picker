@@ -1,0 +1,12 @@
+# Who has a meal plan. Copy to people.yaml (kept out of git) and fill in your own.
+# Keys are Home Assistant user ids (Settings > People > Users, or the websocket call
+# {"type":"config/auth/list"}). Shapes: SCHEMA.md "Per person".
+#   name     shown on the card
+#   notify   the person's phone notify service; leave out if they have no companion app
+#   shared   a shared screen (no plan of its own; the card asks who's using it)
+#
+# Without a people.yaml the planner makes one plan from data/ (single-person mode).
+
+0123456789abcdef0123456789abcdef: {name: Alex, notify: notify.mobile_app_alexs_phone}
+fedcba9876543210fedcba9876543210: {name: Sam}
+00000000000000000000000000000ad0: {name: Kitchen, shared: true}

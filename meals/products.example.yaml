@@ -1,0 +1,38 @@
+# Example of products.yaml: normalised ingredient name (common.norm_name) -> what to buy.
+# The real file is drafted from the pool's ingredient names, then corrected by hand.
+#
+#   aldi, woolworths  product id in that store's price snapshot, or a list of candidate ids;
+#                     leave a store out if it doesn't sell it (recipes needing it then can't be
+#                     priced there). Ids missing from the week's snapshot are ignored. The need is
+#                     merged across both recipes first, then the cheapest candidate is bought:
+#                     lowest checkout, or for freezable entries lowest cost of what's used (the
+#                     spare goes in the freezer)
+#   cut               marks a main protein; a key of protein.yaml, matched against freezer.json
+#                     and used for the bulk meat alert. Makes the entry freezable
+#   freezes: true     freezable without being a protein (bread, stock): buy by price per unit
+#                     and offer the leftover for the freezer, named by the ingredient
+#   count_per_pack    recipe items per store item when both count ("8" spring onions a bunch);
+#                     only used when the recipe and the product are both "ea"
+#   pantry: true      always in the cupboard: costs nothing, left off the list
+#   each_g            grams per item, when the recipe counts ("2 onions") and the shop
+#                     weighs, or the reverse; common ones are built into plan_week.EACH_G
+#   same_as: name     use another entry's products ("garlic clove: {same_as: garlic}"); fields
+#                     given beside it override that entry's
+#   ml_per_g          millilitres per gram, when the recipe measures volume and the shop
+#                     sells by weight, or the reverse (honey ~0.7, flour ~1.9)
+#
+# Anything that can't be converted is reported as unmatched, never guessed.
+
+chicken breast:  {aldi: ["000000000000123456", "000000000000123458"], woolworths: ["6096826", "6096827"],
+                  cut: chicken breast}
+chicken thigh:   {aldi: "000000000000123457", woolworths: "6096830", cut: chicken thigh}
+greek yoghurt:   {aldi: "000000000000222111", woolworths: "123987"}
+onion:           {same_as: brown onion}
+brown onion:     {aldi: "000000000000333444", woolworths: "144329", each_g: 150}
+honey:           {aldi: "000000000000555666", woolworths: "777123", ml_per_g: 0.7}
+fish sauce:      {woolworths: "456789"}
+burger buns:     {aldi: "000000000000777888", woolworths: "345678", freezes: true}
+spring onion:    {aldi: "000000000000999000", woolworths: "201234", count_per_pack: 8, each_g: 15}
+garam masala:    {pantry: true}
+spray oil:       {pantry: true}
+salt:            {pantry: true}

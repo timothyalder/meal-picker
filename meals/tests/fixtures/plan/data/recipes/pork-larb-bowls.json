@@ -1,0 +1,39 @@
+{
+ "slug": "pork-larb-bowls",
+ "url": "https://example.invalid/pork-larb-bowls/",
+ "title": "Pork Larb Bowls",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Thai"
+ ],
+ "keywords": [],
+ "rating": 4.6,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1000,
+   "unit": "g",
+   "name": "pork mince",
+   "protein": true
+  },
+  {
+   "amount": 500,
+   "unit": "g",
+   "name": "rice"
+  },
+  {
+   "amount": 3,
+   "unit": "tbsp",
+   "name": "fish sauce"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "pork mince"
+}

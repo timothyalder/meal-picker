@@ -1,0 +1,79 @@
+# Main protein cuts, per 100 g of RAW weight (drained for canned legumes).
+# Figures are approximate: rounded from Australian food composition data (AUSNUT/AFCD)
+# and typical supermarket labels. Fat varies a lot by trim, so kcal is a rough guide.
+#
+# recipe_table.py sizes the main protein so each serve gets target_protein_g from it.
+#   match:  names that identify the cut in a recipe (plural-tolerant; the longest match wins)
+#   not:    words that rule a match out ("egg noodles" is not eggs)
+#   each_g: raw grams of one item, for recipes that count ("2 chicken breasts")
+# products.yaml can also mark an ingredient with `cut:`; that wins over `match`.
+
+target_protein_g: 50
+
+chicken breast:
+  {protein_per_100g: 22.5, kcal_per_100g: 108, each_g: 250,
+   match: [chicken breast, chicken breast fillet, chicken tenderloin, chicken tender]}
+chicken thigh fillet:
+  {protein_per_100g: 19.5, kcal_per_100g: 145, each_g: 125,
+   match: [chicken thigh, chicken thigh fillet, boneless chicken thigh]}
+# Bone-in cuts: figures are per 100 g as bought, bone included (about 30% bone), so the
+# weight scaled to the protein target is what you buy.
+chicken drumstick:
+  {protein_per_100g: 13.0, kcal_per_100g: 150, each_g: 150, match: [drumstick, chicken leg, maryland]}
+chicken thigh cutlet:
+  {protein_per_100g: 14.0, kcal_per_100g: 160, each_g: 170,
+   match: [thigh cutlet, bone in chicken thigh, chicken thigh bone in, bone in thigh]}
+whole chicken:
+  {protein_per_100g: 15.0, kcal_per_100g: 200, each_g: 1600, match: [whole chicken, chicken whole, roast chicken, rotisserie chicken]}
+chicken mince:
+  {protein_per_100g: 18.5, kcal_per_100g: 160, match: [chicken mince, ground chicken, minced chicken]}
+beef mince:
+  {protein_per_100g: 18.0, kcal_per_100g: 230, match: [beef mince, ground beef, minced beef]}
+lean beef mince:
+  {protein_per_100g: 21.0, kcal_per_100g: 150,
+   match: [lean beef mince, extra lean beef mince, lean ground beef, heart smart beef mince]}
+beef rump:
+  {protein_per_100g: 22.5, kcal_per_100g: 130,
+   match: [beef rump, rump steak, beef strip, beef stir fry strip, stir fry beef, sirloin steak, beef steak, flank steak, skirt steak]}
+beef chuck:
+  {protein_per_100g: 20.0, kcal_per_100g: 155,
+   match: [beef chuck, chuck steak, gravy beef, beef cheek, diced beef, stewing beef, braising beef]}
+pork mince:
+  {protein_per_100g: 18.0, kcal_per_100g: 210, match: [pork mince, ground pork, minced pork]}
+pork loin:
+  {protein_per_100g: 22.5, kcal_per_100g: 120,
+   match: [pork loin, pork fillet, pork tenderloin, pork chop, pork steak, pork medallion]}
+pork shoulder:
+  {protein_per_100g: 19.0, kcal_per_100g: 190,
+   match: [pork shoulder, pork scotch fillet, pork neck, pork butt, pulled pork]}
+lamb leg:
+  {protein_per_100g: 20.5, kcal_per_100g: 150, match: [lamb leg, leg of lamb, lamb backstrap, lamb fillet]}
+lamb shoulder:
+  {protein_per_100g: 18.0, kcal_per_100g: 215, match: [lamb shoulder, diced lamb, lamb chop, lamb neck]}
+lamb mince:
+  {protein_per_100g: 18.0, kcal_per_100g: 230, match: [lamb mince, ground lamb, minced lamb]}
+turkey mince:
+  {protein_per_100g: 19.5, kcal_per_100g: 150, match: [turkey mince, ground turkey, minced turkey]}
+salmon:
+  {protein_per_100g: 20.0, kcal_per_100g: 200, each_g: 180,
+   match: [salmon, salmon fillet, salmon portion], not: [smoked]}
+white fish:
+  {protein_per_100g: 18.5, kcal_per_100g: 85, each_g: 160,
+   match: [white fish, fish fillet, basa, barramundi, ling, snapper, cod, flathead, hake, dory], not: [sauce]}
+prawns:
+  {protein_per_100g: 20.0, kcal_per_100g: 90, each_g: 20,
+   match: [prawn, shrimp, king prawn, green prawn], not: [paste, cracker, dried]}
+firm tofu:
+  {protein_per_100g: 12.5, kcal_per_100g: 120, match: [firm tofu, extra firm tofu, tofu], not: [silken, puff]}
+canned tuna:
+  {protein_per_100g: 25.0, kcal_per_100g: 115, each_g: 185, match: [tuna], not: [sauce, mayo]}
+canned chickpeas:
+  {protein_per_100g: 7.0, kcal_per_100g: 125, each_g: 240, match: [chickpea], not: [flour, dried]}
+canned lentils:
+  {protein_per_100g: 6.5, kcal_per_100g: 90, each_g: 240,
+   match: [lentil, brown lentil, canned lentil], not: [dried, red, puy, french, green]}
+dried lentils:
+  {protein_per_100g: 23.0, kcal_per_100g: 330,
+   match: [dried lentil, red lentil, puy lentil, french lentil, green lentil]}
+eggs:
+  {protein_per_100g: 12.5, kcal_per_100g: 140, each_g: 52, match: [egg], not: [noodle, wash]}

@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Home Assistant's default theme variables, light and dark. */
+  body { margin: 0; font-family: Roboto, system-ui, sans-serif; background: var(--primary-background-color);
+    --primary-color: #009ac7; --text-primary-color: #fff; --primary-text-color: #141414; --secondary-text-color: #5e5e5e;
+    --primary-background-color: #fafafa; --secondary-background-color: #ececec; --card-background-color: #fff;
+    --divider-color: rgba(0,0,0,.12); --error-color: #db4437; --warning-color: #ffa600; --success-color: #43a047; }
+  body.dark { color-scheme: dark;
+    --primary-text-color: #e1e1e1; --secondary-text-color: #9b9b9b; --primary-background-color: #111111;
+    --secondary-background-color: #282828; --card-background-color: #1c1c1c; --divider-color: rgba(225,225,225,.12); }
+  /* Panel view: the card fills the width under HA's 56px toolbar. */
+  #toolbar { height: 56px; background: var(--card-background-color); border-bottom: 1px solid var(--divider-color); }
+</style>
+<div id="toolbar"></div>
+<div id="wrap"></div>
+<script type="module">
+  import "../meals-card.js";
+  window.__calls = [];
+  // Every fetch the card makes, so the harness can tell whether an event caused a refetch.
+  window.__fetches = [];
+  const realFetch = window.fetch.bind(window);
+  window.fetch = (url, opts) => { window.__fetches.push(String(url).split("?")[0]); return realFetch(url, opts); };
+  // user: hass.user as the frontend gives it ({id, name, is_admin, …}); default TJ.
+  window.__mount = (config, { dark = false, fail = false, user = { id: "148d862cd5a04037b7f641dbc0f55c72", name: "TJ" } } = {}) => {
+    document.body.classList.toggle("dark", dark);
+    document.getElementById("wrap").replaceChildren();
+    const card = document.createElement("meals-card");
+    card.setConfig(config);
+    document.getElementById("wrap").appendChild(card);
+    card.hass = {
+      user,
+      states: {},
+      connection: { subscribeEvents: (cb, type) => { window.__fire = cb; window.__eventType = type; return Promise.resolve(() => {}); } },
+      callService: (domain, service, data) => {
+        window.__calls.push({ domain, service, data });
+        return fail ? new Promise((_, no) => setTimeout(() => no({ code: "service_not_found", message: `Service pyscript.${service} not found` }), 50))
+                    : Promise.resolve({});
+      },
+    };
+    window.__card = card;
+  };
+  window.__ready = true;
+</script>

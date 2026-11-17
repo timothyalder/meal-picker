@@ -1,0 +1,17 @@
+# Meal picker schedule for nebula (crontab -e). Assumes the repo is at ~/home-assistant with
+# its venv at ~/home-assistant/.venv, and that ~/.config/ha/token (a Home Assistant
+# long-lived token) exists for this user: ha_sync.py push reads it. Times are local.
+# run_week.py decides for itself whether anything is left to do, so extra calls are harmless.
+# It plans and publishes for every person with a plan in shopping/meals/people.yaml (prices are
+# fetched once), pushes people.json to HA first, and notifies only people with a `notify` there.
+# A person whose plan or push fails is retried on the next call; the others are unaffected.
+# Output goes to shopping/meals/data/run_week.log (one timestamped line per step, naming the person).
+# The first run moves TJ's single-person files into data/people/<his key>/ (once).
+
+# Wednesday 7:30, then hourly to 22:30
+30 7-22 * * 3   cd ~/home-assistant && .venv/bin/python shopping/meals/run_week.py >> shopping/meals/data/run_week.log 2>&1
+# Thursday and Friday 8:00 and 18:00 (from Friday 18:00 it publishes on last week's prices if it must)
+0 8,18 * * 4,5  cd ~/home-assistant && .venv/bin/python shopping/meals/run_week.py >> shopping/meals/data/run_week.log 2>&1
+
+# 1st of the month, 3:00: crawl new recipes, then rebuild the pool
+0 3 1 * *       cd ~/home-assistant && { .venv/bin/python shopping/meals/crawl_recipes.py --refresh-new; .venv/bin/python shopping/meals/crawl_recipes.py --filter; } >> shopping/meals/data/crawl.log 2>&1

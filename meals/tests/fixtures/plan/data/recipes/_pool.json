@@ -1,0 +1,42 @@
+{
+ "generated": "2026-11-15",
+ "pool": {
+  "honey-chicken-stirfry": {
+   "style": "stir-fry",
+   "protein": null
+  },
+  "chicken-thigh-curry": {
+   "style": "curry",
+   "protein": null
+  },
+  "beef-ragu": {
+   "style": "pasta",
+   "protein": null
+  },
+  "lamb-tagine": {
+   "style": "stew",
+   "protein": null
+  },
+  "pork-larb-bowls": {
+   "style": "bowl",
+   "protein": null
+  },
+  "chicken-yoghurt-bake": {
+   "style": "bake",
+   "protein": null
+  },
+  "beef-chilli": {
+   "style": "stew",
+   "protein": null
+  },
+  "dragonfruit-surprise": {
+   "style": "salad",
+   "protein": null
+  },
+  "coconut-chicken-soup": {
+   "style": "soup",
+   "protein": null
+  }
+ },
+ "rejected": {}
+}

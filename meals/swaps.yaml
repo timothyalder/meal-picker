@@ -1,0 +1,64 @@
+# Ingredient swaps applied by recipe_table.py. TJ's to edit.
+#
+# Each row:
+#   id:     short name; each person can turn a row off in their settings (butter-frying and
+#           butter go together as "butter")
+#   match:  words or phrases; the row applies when the ingredient name contains one
+#           (whole words, plural-tolerant)
+#   not:    words that rule the row out ("sesame oil" is flavour, not frying oil)
+#   to:     the replacement name, or null to drop it (it stays in the table, struck through)
+#   ratio:  replacement amount per unit of the original (default 1, same amount)
+#   note:   one line shown beside the ingredient
+#   when:   frying -> only when the step it belongs to fries, sautés or sears
+#   notice: a line shown above the table; {name}/{Name} is the original, {amount} the scaled amount
+#   notice_over: show the notice only above these scaled amounts ({ml: .., g: ..})
+#   no_amount: true -> show the replacement with no quantity ("spray oil")
+#   kcal_saved_per_100: calories the swap saves per 100 g or ml of the original (approximate),
+#           taken off the per-serve estimate
+# The first row that applies wins, so put narrower rows (with `when`) first.
+#
+# Rice stays as written: white rice is wanted, so there is deliberately no rice row.
+# Chilli and spices are never changed: deliberately no rows for them either.
+
+- id: cream
+  match: [cream, sour cream]
+  not: [cheese, coconut, ice, tartar, corn, creamed, soup]
+  to: Greek yoghurt
+  note: stir in off the heat; don't boil
+  notice: "{Name} swapped for Greek yoghurt: stir it in off the heat and don't let it boil"
+  kcal_saved_per_100: 230   # thickened cream ~330, Greek yoghurt ~100
+
+- id: oil
+  match: [oil]
+  not: [sesame, chilli, chili, truffle, spray, coconut, sunflower seed, infused, garlic, anchovy, sardine, tuna, sun dried, sundried]
+  to: spray oil
+  note: spray the pan
+  no_amount: true
+  kcal_saved_per_100: 820
+
+- id: butter-frying
+  match: [butter]
+  not: [peanut, almond, cashew, nut, bean, lettuce, garlic butter, buttermilk]
+  when: frying
+  to: spray oil
+  note: spray the pan instead of butter
+  no_amount: true
+  kcal_saved_per_100: 720
+
+- id: butter
+  match: [butter]
+  not: [peanut, almond, cashew, nut, bean, lettuce, garlic butter, buttermilk]
+  to: null
+  note: left out
+  kcal_saved_per_100: 720
+
+# White, brown and caster sugar (and their cousins). Honey and maple syrup are left alone;
+# add them to `match` to remove them too. Palm sugar is kept for Thai dishes: take it out of `not` to drop it too.
+- id: sugar
+  match: [sugar]
+  not: [snap, palm, sugar free]
+  to: null
+  note: left out
+  notice: "{Name} removed: the recipe used {amount}, so the sauce will be less sweet"
+  notice_over: {ml: 20, g: 15}
+  kcal_saved_per_100: 390

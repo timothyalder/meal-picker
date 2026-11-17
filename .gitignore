@@ -1,0 +1,17 @@
+# Personal and generated data: never in the public repo
+/meals/people.yaml
+/meals/data/
+/receipts/
+/data/
+/STATUS.md
+*.log
+
+# Card test output (regenerate with make_mocks.py and harness.mjs)
+card/test/mock/
+card/test/out/
+card/test/node_modules/
+
+__pycache__/
+.pytest_cache/
+.venv/
+.DS_Store

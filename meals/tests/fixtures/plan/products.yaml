@@ -1,0 +1,17 @@
+# Test lookup table for invented fixture products.
+chicken breast:  {aldi: [A-GONE, A-CHB], woolworths: [W-CHB], cut: chicken breast}
+chicken thigh:   {aldi: A-CHT, woolworths: W-CHT, cut: chicken thigh}
+beef mince:      {aldi: A-MIN, woolworths: W-MIN, cut: beef mince}
+lamb shoulder:   {aldi: A-LAM, woolworths: W-LAM, cut: lamb shoulder}
+pork mince:      {aldi: A-POR, woolworths: W-POR, cut: pork mince}
+greek yoghurt:   {aldi: A-YOG, woolworths: W-YOG}
+rice:            {aldi: A-RIC, woolworths: W-RIC}
+onion:           {aldi: A-ONI, woolworths: W-ONI}
+tinned tomatoes: {aldi: A-TOM, woolworths: W-TOM}
+pasta:           {aldi: A-PAS, woolworths: W-PAS}
+chickpeas:       {aldi: A-CHK, woolworths: W-CHK}
+coconut milk:    {aldi: A-COC, woolworths: W-COC}
+chicken stock:   {aldi: A-STO, woolworths: W-STO}
+fish sauce:      {woolworths: W-FSH}
+garam masala:    {pantry: true}
+salt:            {pantry: true}

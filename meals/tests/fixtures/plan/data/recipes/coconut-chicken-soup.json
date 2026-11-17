@@ -1,0 +1,39 @@
+{
+ "slug": "coconut-chicken-soup",
+ "url": "https://example.invalid/coconut-chicken-soup/",
+ "title": "Coconut Chicken Soup",
+ "serves": 6,
+ "categories": [
+  "Main"
+ ],
+ "cuisine": [
+  "Thai"
+ ],
+ "keywords": [],
+ "rating": 4.9,
+ "rating_count": 10,
+ "nutrition": {},
+ "ingredients": [
+  {
+   "amount": 1200,
+   "unit": "g",
+   "name": "chicken thigh",
+   "protein": true
+  },
+  {
+   "amount": 800,
+   "unit": "ml",
+   "name": "coconut milk"
+  },
+  {
+   "amount": 1,
+   "unit": "l",
+   "name": "chicken stock"
+  }
+ ],
+ "steps": [
+  "Cook it."
+ ],
+ "fetched": "2026-11-15",
+ "cut": "chicken thigh"
+}

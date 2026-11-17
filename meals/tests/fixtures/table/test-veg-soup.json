@@ -1,0 +1,12 @@
+{
+ "slug": "test-veg-soup", "url": "https://example.invalid/test-veg-soup", "title": "Test Veg Soup",
+ "serves": 3,
+ "nutrition": {"calories": 210},
+ "ingredients": [
+  {"amount": 2, "unit": "medium", "name": "carrots", "notes": null, "group": null},
+  {"amount": 3, "unit": "cups", "name": "vegetable stock", "notes": null, "group": null},
+  {"amount": 0.5, "unit": "tsp", "name": "smoked paprika", "notes": null, "group": null},
+  {"amount": 1, "unit": "kg", "name": "pumpkin", "notes": null, "group": null}
+ ],
+ "steps": ["Simmer the carrots and pumpkin in the stock with the paprika, then blend."]
+}
